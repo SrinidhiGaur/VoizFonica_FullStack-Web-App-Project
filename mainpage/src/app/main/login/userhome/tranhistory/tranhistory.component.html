@@ -1,0 +1,81 @@
+
+<app-userhome></app-userhome>
+<form  style=" padding-left: 200px; text-align: center;" >
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      </head>
+      <body style="background-image: url('https://img.freepik.com/free-vector/elegant-white-background-with-shiny-lines_1017-17580.jpg?size=626&ext=jpg');  background-repeat: no-repeat; background-size: cover;">
+      
+
+
+      <div class="container " >
+        <h2 style="text-align: center; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif "><b>TRANSACTION HISTORY</b></h2>     
+
+
+
+        <div class="sidenav1">
+          <img src="https://image.flaticon.com/icons/png/512/1642/1642869.png"  width="400" height="350">
+          
+         
+         
+        </div>
+          
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+        <table class="table table-hover table-striped">
+          <thead class="table-dark">
+            <tr>
+              <th >Sl.no</th>
+              <th>Name</th>
+              <th>Email id</th>
+              <th>Date </th>
+              <th>time</th>
+              <!-- <th>price</th> -->
+              <!-- <th>password</th> -->
+              <th>Phone number</th>
+              <!-- <th>Aadhar number</th> -->
+            </tr>
+          </thead>
+          <tbody >
+              <tr *ngFor="let item of items">
+                  <td>{{item.id}}</td>
+                  <td>{{item.name}}</td>
+                  <td>{{item.emailId}}</td>
+                  <td>{{item.date}}</td>
+                  <td>{{item.time}}</td>
+                  <!-- <td>{{this._service.price}}</td> -->
+                  <!-- <td>{{item.password}}</td> -->
+                <td>{{item.phonenumber}}</td>
+                <!-- <td>{{item.aadharnumber}}</td> -->
+              </tr>
+          </tbody>
+        </table>
+    
+       
+      </div>
+      
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+   
+
+          
+    
+  
+  
+  
+  
+  
+  </body>
+
+
+</form>

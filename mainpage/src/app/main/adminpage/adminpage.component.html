@@ -1,0 +1,67 @@
+
+
+
+      <div>
+
+
+        <div>
+          <br><br>
+          <div style="color: whitesmoke;" class="login-box" >
+            <h1>&nbsp; &nbsp; Admin Login</h1><br>
+          <form   [formGroup]="angForm" novalidate   class="form-inline" #loginForm="ngForm" (ngSubmit)="loginadmin()" >
+    
+            <!-- <label  for="email"><h4 style="color:whitesmoke;" >Email address</h4></label> -->
+            <h4 style="text-align: left" style="color:whitesmoke;" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; User name</h4>
+            <div class=" user-box  form-group ">
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;  &nbsp; 
+              
+              <input  type="email"  class="form-control" id="email"  formControlName="name" name="email" [(ngModel)]="admin.emailId"  >
+              <br><br>
+            </div>
+
+
+            <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm.controls['name'].errors.required">
+                User name is required.
+              </div>
+             
+            </div>
+
+
+
+
+
+          <div>  <label  for="pwd"><h4  style="color:whitesmoke;" >&nbsp;  Password</h4></label>
+           
+
+            <div class="form-group user-box">
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+              <input  type="password" class="form-control"  formControlName="pass" name="password" [(ngModel)]="admin.password" >
+            </div>
+            </div>
+
+
+            <div *ngIf="angForm.controls['pass'].invalid && (angForm.controls['pass'].dirty || angForm.controls['pass'].touched)" class="alert alert-danger">
+              <div *ngIf="angForm.controls['pass'].errors.required">
+                Password is required.
+              </div>
+             
+          
+            </div>
+          
+            <div class="vertical-center1">
+              <br><br><br> <br><br><br><br>
+              
+              <button class="btn btn-info" (click)=" loginadmin()">
+    
+             Login
+             </button></div>
+           
+            <div class="vertical-center2">
+              <button (click)="gotohome()" class="btn btn-info">
+    
+                Go to home</button></div>
+              
+          </form>
+          
+          <br><br><br><br>

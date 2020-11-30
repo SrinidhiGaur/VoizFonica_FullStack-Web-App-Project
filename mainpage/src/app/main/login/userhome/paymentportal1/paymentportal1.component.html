@@ -1,0 +1,82 @@
+
+<app-userhome></app-userhome>
+
+<div class="row">
+    <div class="col-75">
+      <br><br> <br><br>
+      <div class="container">
+      
+        <form action="/action_page.php">
+          
+          <div class="row">
+
+            
+            <div class="col-50">
+             
+              <h3>Billing</h3>
+              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+             
+              <input type="text"  id="username" name="firstname" [value]="name"   required>
+              <label for="email"><i class="fa fa-envelope"></i> Email</label>
+              <input type="text" id="emailid"   name="emailid" [value]="emailid">
+              <label for="city"><i class="fa fa-institution"></i> Phonenumber</label>
+              <input type="text" id="city"  name="city" [value]="phonenumber">
+  
+
+              <div class="row">
+
+                <div class="col-50">
+                  <label for="state">State</label>
+                  <input type="text" id="state" name="state" placeholder="NY">
+                </div>
+                <div class="col-50">
+                  <label for="zip">Pincode</label>
+                  <input type="text" id="zip" name="zip" placeholder="10001">
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-50">
+              <h3>Payment</h3>
+              <label for="fname">Accepted Cards</label>
+              <div class="icon-container">
+                <i class="fa fa-cc-visa" style="color:navy;"></i> &nbsp;
+                <i class="fa fa-cc-amex" style="color:blue;"></i>&nbsp;
+                <i class="fa fa-cc-mastercard" style="color:red;"></i>&nbsp;
+                <i class="fa fa-cc-discover" style="color:orange;"></i>
+              </div>
+              <label for="cname">Name on Card</label>
+              <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+              <label for="ccnum">Card number</label>
+              <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+              <label for="expmonth">Exp Month</label>
+              <input type="text" id="expmonth" name="expmonth" placeholder="September">
+  
+              <div class="row">
+                <div class="col-50">
+                  <label for="expyear">Exp Year</label>
+                  <input type="text" id="expyear" name="expyear" placeholder="2018">
+                </div>
+                <div class="col-50">
+                  <label for="cvv">CVV</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="352">
+                </div>
+              </div>
+            </div>
+  
+          </div>
+          <label>
+            Amount :
+            <!-- this._service.price -->
+            <input type="text"  [value]=" price" name="pay" >
+          </label>
+          <input (click)="gotopayment()" type="submit" value="Pay" class="btn">
+<h4 style="text-align: center; font-family: cursive;">{{msg}}</h4>
+
+<input (click)="gotonext()" type="button" value="Generate bill" class="btn">
+        </form>
+      </div>
+    </div>
+  
+    
+  </div>

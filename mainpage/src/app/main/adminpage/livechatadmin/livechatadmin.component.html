@@ -1,0 +1,59 @@
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<form style="text-align: center; background-color:tomato;" >
+  <br>
+<h1 >Chat with Customer</h1>
+
+<img  style="float:left;   width: 40%;"  src="https://images.martechadvisor.com/images/uploads/content_images/live_chat_2_57519d47d72f6.jpg" alt="">
+
+<main style="  float: right; padding-right: 50px;" class="chat">
+
+    <div>
+        <div class="chat-content">
+            <div  style=" border-radius: 20px;" class="card">
+           
+                <div *ngFor="let chatMessage of webSocketService.chatMessages">
+                  <div *ngIf="chatMessage.user=='Admin'"> 
+
+                    <div class="container-right"> 
+                      <img src="https://cdn3.iconfinder.com/data/icons/user-roles/64/users-25-512.png" alt="Avatar" style="width:100%;">
+                      <strong>{{chatMessage.user}} : &nbsp;&nbsp;</strong>
+                      <p>{{chatMessage.message}}</p>
+                      
+                    </div>
+                  </div>
+                  <div *ngIf="chatMessage.user!='Admin'"> 
+
+                    <div class="container-left"> 
+                      <img src="https://cdn3.iconfinder.com/data/icons/user-roles/64/users-25-512.png" alt="Avatar" style="width:100%;">
+                      <strong>{{chatMessage.user}} : &nbsp;&nbsp;</strong>
+                      <p>{{chatMessage.message}}</p>
+                      
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+        </div>
+        <form  (ngSubmit)="sendMessage(sendForm)" #sendForm="ngForm">  
+            <div class="chat-send-row">
+                <div class="col-4">
+                    <input type="text"  class="form-control" name="user" placeholder="Enter Admin" id="input-user" ngModel>
+
+                </div>
+                <br>
+        
+                <div class="col-6">
+                    <input type="text" class="form-control" name="message" placeholder="Enter response" id="input-message" ngModel>
+                </div>
+                <br>
+                <div class="col-2">
+                    <button type="submit" class="btn btn-primary" style="width: max-content;">Send &nbsp;<i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+</form>

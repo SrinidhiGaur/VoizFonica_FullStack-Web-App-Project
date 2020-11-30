@@ -1,0 +1,9 @@
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+border-radius: 12px;
+}

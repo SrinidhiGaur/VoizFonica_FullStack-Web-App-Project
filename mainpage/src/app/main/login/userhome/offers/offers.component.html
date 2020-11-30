@@ -1,0 +1,50 @@
+<app-userhome></app-userhome>
+
+
+
+<div style="padding-left: 100px;     background-image: url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-021.jpg');"  >
+  <form   style="text-align: center; padding-left: 400px;">
+
+    <div  class="w3-row-padding w3-center w3-padding-64" id="pricing">  
+  
+      <div  class="w3-twothird w3-margin-bottom">
+        <ul class="w3-ul w3-border w3-hover-shadow">
+          <li class="w3-theme">
+            <p class="w3-xlarge">OFFERS</p>
+          </li>
+          <table class="table table-striped">
+            <thead class="table-dark">
+              <tr class="w3-tomato">
+                <th>Id</th>
+                <th>OFFERS</th>
+                <th>PRICE</th>
+                <th>Description</th>
+               <th>&nbsp;</th>
+                
+              </tr>
+            </thead >
+            <tbody >
+                <tr class="w3-hover-shadow" *ngFor="let item of items">
+                    <td>{{item.id}}</td>
+                    <td>{{item.offers}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.discription}}</td>
+                    <td><button  type="button" id={{item.id}} (click)="gotopayment(item.id)" class="btn btn-success">Buy</button></td>
+                  
+                </tr>
+            </tbody>
+          </table>
+          <li class="w3-theme-l5 w3-padding-24">
+            <!-- <button class="w3-button w3-teal w3-padding-large" (click)="gotouserlogin()"><i class="fa fa-check"></i> Recharge</button> -->
+          </li>
+        </ul>
+      </div>
+    
+    
+    </div>
+  </form>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+</div>
+
+

@@ -1,0 +1,26 @@
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+border-radius: 12px;
+}
+.body {
+    text-align: center;
+}
+
+ .button {
+    position: absolute;
+    top: 50%;
+border-radius: 12px;
+}
+.center {
+    height: 200px;
+   margin: auto;
+  width: 50%;
+  border: 3px solid black;
+  padding: 30px;
+  background-color:ghostwhite;
+}

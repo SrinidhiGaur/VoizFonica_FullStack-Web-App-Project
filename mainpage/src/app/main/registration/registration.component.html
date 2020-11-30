@@ -1,0 +1,210 @@
+
+
+
+<header class="header">
+  <nav class="navbar navbar-expand-lg navbar-light py-3">
+  <div class="container">
+  <!-- Navbar Brand -->
+  <a href="#" class="navbar-brand">
+  VoizFonica
+  </a>
+  </div>
+  </nav>
+  </header>
+  
+  
+  <div class="container">
+  <div class="row py-5 mt-4 align-items-center">
+  <!-- For Demo Purpose -->
+  <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+  <img src="https://res.cloudinary.com/mhmd/image/upload/v1569543678/form_d9sh6m.svg" alt="" class="img-fluid mb-3 d-none d-md-block">
+  <h1>Create an Account</h1>
+  
+  </div>
+  
+  <!-- Registeration Form -->
+  <div class="col-md-7 col-lg-6 ml-auto">
+  <form    [formGroup]="angForm" novalidate    (ngSubmit)="registerUser()" class="form-inline" #loginForm="ngForm">
+  <div class="row">
+  
+  <!-- First Name -->
+  <div class="   input-group col-lg-12 mb-4">
+  <div class="   input-group-prepend">
+  
+  <span class="input-group-text bg-white px-4 border-md border-right-0">
+  <i class="fa fa-user text-muted"></i>
+  </span>
+  </div>
+  <input id="firstName" type="text"     formControlName="ffn"  placeholder="First Name"   class=" form-control bg-white border-left-0 border-md "  name="fn" [(ngModel)]="user.firstname" required >
+  </div>
+
+
+
+  <div *ngIf="angForm.controls['ffn'].invalid && (angForm.controls['ffn'].dirty || angForm.controls['ffn'].touched)" class="alert alert-danger">
+    <div *ngIf="angForm.controls['ffn'].errors.required">
+      Firstname is required.
+    </div>
+    
+
+  </div>
+
+  
+  <!-- Last Name -->
+  <div class="  input-group col-lg-12 mb-4">
+  <div class="input-group-prepend">
+  <span class="input-group-text bg-white px-4 border-md border-right-0">
+  <i class="fa fa-user text-muted"></i>
+  </span>
+  </div>
+  <input id="lastName" type="text"    formControlName="ln"  name="ln" [(ngModel)]="user.lastname" required  placeholder="Last Name" class="form-control bg-white border-left-0 border-md">
+  </div>
+
+  <div *ngIf="angForm.controls['ln'].invalid && (angForm.controls['ln'].dirty || angForm.controls['ln'].touched)" class="alert alert-danger">
+    <div *ngIf="angForm.controls['ln'].errors.required">
+      Lastname is required.
+    </div>
+    
+
+  </div>
+
+  
+  <!-- Email Address -->
+  <div class=" input-group col-lg-12 mb-4">
+  <div class="input-group-prepend">
+  <span class="input-group-text bg-white px-4 border-md border-right-0">
+  <i class="fa fa-envelope text-muted"></i>
+  </span>
+
+  </div>
+  <input id="email" type="email"  formControlName="name"  placeholder="Email Address" name="email" [(ngModel)]="user.emailId"  class="form-control bg-white border-left-0 border-md">
+  </div>
+
+  <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)" class="alert alert-danger">
+    <div *ngIf="angForm.controls['name'].errors.required">
+      Email is required.
+    </div>
+    <div *ngIf="angForm.controls['name'].errors.email">
+      Enter valid emailId.
+    </div>
+  </div>
+
+  
+  <!-- Phone Number -->
+  <div class="   input-group col-lg-12 mb-4">
+  <div class="input-group-prepend">
+  <span class="input-group-text bg-white px-4 border-md border-right-0">
+  <i class="fa fa-phone-square text-muted"></i>
+  </span>
+  </div>
+  <select id="countryCode" name="countryCode" style="max-width: 80px" class="custom-select form-control bg-white border-left-0 border-md h-100 font-weight-bold text-muted">
+  <option value="">+12</option>
+  <option value="">+10</option>
+  <option value="">+15</option>
+  <option value="">+91</option>
+  </select>
+  <input id="phoneNumber" type="number"   formControlName="pa" name="phone" placeholder="Phone Number" [(ngModel)]="user.phonenumber"  class="form-control bg-white border-md border-left-0 pl-3">
+  </div>.
+
+  <div *ngIf="angForm.controls['pa'].invalid && (angForm.controls['pa'].dirty || angForm.controls['pa'].touched)" class="alert alert-danger">
+    <div *ngIf="angForm.controls['pa'].errors.required">
+    Phonenumber is required.
+    </div>
+    
+    
+  </div>
+
+
+  
+  <!-- Password -->
+  <div class="   input-group col-lg-12 mb-4">
+  <div class="input-group-prepend">
+  <span class="input-group-text bg-white px-4 border-md border-right-0">
+  <i class="fa fa-lock text-muted"></i>
+  </span>
+  </div>
+  <input id="password" type="password"  formControlName="pass"    name="ph" [(ngModel)]="user.password" required  placeholder="Password" class="form-control bg-white border-left-0 border-md">
+  </div>
+  
+
+  <div *ngIf="angForm.controls['pass'].invalid && (angForm.controls['pass'].dirty || angForm.controls['pass'].touched)" class="alert alert-danger">
+    <div *ngIf="angForm.controls['pass'].errors.required">
+      Password is required.
+    </div>
+    <div *ngIf="angForm.controls['pass'].errors.minlength">Password must be at least 8 characters</div>
+
+  </div>
+  
+  <div class=" input-group col-lg-12 mb-4">
+    <div class="input-group-prepend">
+    <span class="input-group-text bg-white px-4 border-md border-right-0">
+    <i class="fa fa-user text-muted"></i>
+    </span>
+    </div>
+    <input id="dob" type="date" name="dob"   formControlName="dob"  placeholder="Date of birth"  name="dob" [(ngModel)]="user.dateofbirth" required    class="form-control bg-white border-left-0 border-md">
+    </div>
+    <div *ngIf="angForm.controls['dob'].invalid && (angForm.controls['dob'].dirty || angForm.controls['dob'].touched)" class="alert alert-danger">
+      <div *ngIf="angForm.controls['dob'].errors.required">
+       Date of birth is required.
+      </div>
+    </div>
+    <div class="  input-group col-lg-12 mb-4">
+  <div class="input-group-prepend">
+  <span class="input-group-text bg-white px-4 border-md border-right-0">
+  <i class="fa fa-user text-muted"></i>
+  </span>
+  </div>
+  <input id="Aadhar" type="number"  class="form-control"   formControlName="an" name="an" [(ngModel)]="user.aadharnumber" required  placeholder="Aadhar number" class="form-control bg-white border-left-0 border-md">
+  </div>
+  <div *ngIf="angForm.controls['an'].invalid && (angForm.controls['an'].dirty || angForm.controls['an'].touched)" class="alert alert-danger">
+    <div *ngIf="angForm.controls['an'].errors.required">
+      Aadhar number is required.
+    </div>
+  </div>
+
+  <div class="  input-group col-lg-12 mb-4">
+    <div class="input-group-prepend">
+    <span class="input-group-text bg-white px-4 border-md border-right-0">
+    <i class="fa fa-user text-muted"></i>
+    </span>
+    </div>
+    <input id="stype" type="text"  class="form-control"   formControlName="st" name="st" [(ngModel)]="user.servicetype" required  placeholder="eg: post-paid" class="form-control bg-white border-left-0 border-md">
+    </div>
+    <div *ngIf="angForm.controls['st'].invalid && (angForm.controls['st'].dirty || angForm.controls['st'].touched)" class="alert alert-danger">
+      <div *ngIf="angForm.controls['st'].errors.required">
+        Service Type is required.
+      </div>
+    </div>
+
+
+  <div class="  col-lg-12 mx-auto mb-0">
+  <button  style="  height: 40px; width: 300px; font-family: cursive;"  [disabled]="angForm.pristine || angForm.invalid"  type="submit" class="btn btn-success"><h4 style="color:black;">Create an account</h4></button>
+</div>
+<br><br><br>
+  <div class="  col-lg-12 mx-auto mb-0">
+    <button style="  height: 40px; width: 300px; font-family: cursive;"class="btn btn-info"  (click)="gotohome()"><h4 style="color:black;">Go to home</h4></button>
+  
+  </div>
+
+  
+  <div class=" col-lg-12 mx-auto d-flex align-items-center my-4">
+  <div class="border-bottom w-100 ml-5"></div>
+  <span class="px-2 small text-muted font-weight-bold text-muted">OR</span>
+  <div class="border-bottom w-100 mr-5"></div>
+  </div>
+ 
+
+
+  <div class="text-center w-100">
+  <p class="text-muted font-weight-bold">Already Registered? <a href="login" class="text-primary ml-2">Login</a></p>
+  </div>
+  
+  </div>
+
+  </form>
+  </div>
+  </div>
+  </div>
+
+
+
+

@@ -1,0 +1,95 @@
+.chat{
+    margin-top: 3rem ;
+}
+
+div.chat-content{
+    border-radius: .25rem;
+    height: 30rem;
+    width: 40rem;
+    margin-bottom: 2rem;
+    
+}
+.card{
+    height: 100%;
+    border: 10px solid rgba(0,0,0,.125);
+    overflow:scroll;
+}
+.chat_ib {
+    float: left;
+    padding: 0 0 0 15px;
+    width: 88%;
+  }
+
+  .chat_people{ overflow:hidden; clear:both;}
+  .chat_list {
+    border-bottom: 1px solid #c4c4c4;
+    margin: 0;
+    padding: 18px 16px 10px;
+  }
+  body {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .container-right {
+    border: 2px solid #dedede;
+    background-color: lightgreen;
+    border-radius: 15px 1px 15px 15px;
+    padding: 5px;
+    margin: 10px 0;
+    float:right;
+    width:50%;
+  }
+  .container-left {
+    border: 2px solid #dedede;
+    background-color: cyan;
+    border-radius: 1px 15px 15px 15px;
+    padding: 5px;
+    margin: 10px 0;
+    float:left;
+    width:50%;
+  }
+
+  
+  .darker {
+    border-color: #ccc;
+    background-color: #ddd;
+  }
+  
+  .container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .container-right img {
+    float: right;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  .container-left img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+  }
+  
+  .container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+  }
+  
+  .time-right {
+    float: right;
+    color: #aaa;
+  }
+  
+  .time-left {
+    float: left;
+    color: #999;
+  }

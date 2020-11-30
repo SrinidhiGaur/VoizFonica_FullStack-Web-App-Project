@@ -44,6 +44,9 @@
     <div *ngIf="angForm.controls['ffn'].errors.required">
       Firstname is required.
     </div>
+    <div *ngIf="angForm.controls['ffn'].errors.pattern">
+      Enter valid firstame.
+    </div>
     
 
   </div>
@@ -62,6 +65,9 @@
   <div *ngIf="angForm.controls['ln'].invalid && (angForm.controls['ln'].dirty || angForm.controls['ln'].touched)" class="alert alert-danger">
     <div *ngIf="angForm.controls['ln'].errors.required">
       Lastname is required.
+    </div>
+    <div *ngIf="angForm.controls['ln'].errors.pattern">
+      Enter valid lastname.
     </div>
     
 
@@ -83,7 +89,7 @@
     <div *ngIf="angForm.controls['name'].errors.required">
       Email is required.
     </div>
-    <div *ngIf="angForm.controls['name'].errors.email">
+    <div *ngIf="angForm.controls['name'].errors.pattern">
       Enter valid emailId.
     </div>
   </div>
@@ -102,14 +108,16 @@
   <option value="">+15</option>
   <option value="">+91</option>
   </select>
-  <input id="phoneNumber" type="number"   formControlName="pa" name="phone" placeholder="Phone Number" [(ngModel)]="user.phonenumber"  class="form-control bg-white border-md border-left-0 pl-3">
+  <input id="phoneNumber" type="tel"   formControlName="pa" name="phone"  pattern="^\d{10}$" placeholder="Phone Number" [(ngModel)]="user.phonenumber"  class="form-control bg-white border-md border-left-0 pl-3">
   </div>.
 
   <div *ngIf="angForm.controls['pa'].invalid && (angForm.controls['pa'].dirty || angForm.controls['pa'].touched)" class="alert alert-danger">
     <div *ngIf="angForm.controls['pa'].errors.required">
     Phonenumber is required.
     </div>
-    
+    <div *ngIf="angForm.controls['pa'].errors.pattern">
+      Enter valid phonenumber.
+    </div>
     
   </div>
 
@@ -153,12 +161,16 @@
   <i class="fa fa-user text-muted"></i>
   </span>
   </div>
-  <input id="Aadhar" type="number"  class="form-control"   formControlName="an" name="an" [(ngModel)]="user.aadharnumber" required  placeholder="Aadhar number" class="form-control bg-white border-left-0 border-md">
+  <input id="Aadhar" type="number"  class="form-control" pattern="^\d{12}$"  formControlName="an" name="an" [(ngModel)]="user.aadharnumber" required  placeholder="Aadhar number" class="form-control bg-white border-left-0 border-md">
   </div>
   <div *ngIf="angForm.controls['an'].invalid && (angForm.controls['an'].dirty || angForm.controls['an'].touched)" class="alert alert-danger">
     <div *ngIf="angForm.controls['an'].errors.required">
       Aadhar number is required.
     </div>
+    <div *ngIf="angForm.controls['an'].errors.pattern">
+      Enter valid aadharnumber.
+    </div>
+    
   </div>
 
   <div class="  input-group col-lg-12 mb-4">

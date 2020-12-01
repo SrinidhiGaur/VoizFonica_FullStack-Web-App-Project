@@ -23,11 +23,11 @@ msg="";
   
  createForm(){
   this.angForm=this.fb.group({
-  name:['',[Validators.required, Validators.pattern('^[a-zA-Z ]+[a-zA-Z0-9_]+@gmail+.com*$')]],
+  name:['',[Validators.required, Validators.pattern('^[a-zA-Z ]+[a-zA-Z0-9_.]+@gmail+.com*$')]],
   pass:['',[Validators.required,Validators.minLength(8)]],
   pa:['',[Validators.required, ]],
-  ffn:['',[Validators.required, Validators.pattern('^[a-zA-Z ]*$')]],
-  ln:['',[Validators.required, Validators.pattern('^[a-zA-Z ]*$')]],
+  ffn:['',[Validators.required, Validators.pattern('^[a-zA-Z]*$')]],
+  ln:['',[Validators.required, Validators.pattern('^[a-zA-Z]*$')]],
   an:['',[Validators.required]],
   dob:['',[Validators.required]],
   st:['',[Validators.required]],

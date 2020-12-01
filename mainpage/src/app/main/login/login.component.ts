@@ -54,7 +54,7 @@ gotohome(){
 }
 createForm(){
   this.angForm=this.fb.group({
-  name:['',[Validators.required,Validators.email]],
+  name:['',[Validators.required,Validators.pattern('^[a-zA-Z ]+[a-zA-Z0-9_]+@gmail+.com*$')]],
   pass:['',[Validators.required,Validators.minLength(8)]],
 
 

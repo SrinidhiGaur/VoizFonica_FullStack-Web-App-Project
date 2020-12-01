@@ -40,7 +40,7 @@
     <div *ngIf="angForm.controls['name'].errors.required">
       Email is required.
     </div>
-    <div *ngIf="angForm.controls['name'].errors.email">
+    <div *ngIf="angForm.controls['name'].errors.pattern">
       Enter valid emailId.
     </div>
   </div>

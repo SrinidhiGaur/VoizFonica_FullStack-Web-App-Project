@@ -50,7 +50,7 @@ public class RegistrationController {
 	User userObj=null;
 	userObj=service.saveUser(user);
 	
-//smtpMailSender.send(tempEmailId, "VoixFonica Team - 3", "Thank you for registering to VoizFonica. Registration successfull");
+smtpMailSender.send(tempEmailId, "VoixFonica Team - 3", "Thank you for registering to VoizFonica. Registration successfull");
 	
 	return userObj;
 }

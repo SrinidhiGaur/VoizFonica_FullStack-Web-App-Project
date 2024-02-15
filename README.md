@@ -29,3 +29,14 @@ VoizFonica is a leading telecommunication company committed to providing seamles
 3. Frame work: Spring Boot, AngularJs
 4. API: Postman, Rest Assured
 5. Database: MySQL
+   
+ ## Pages
+1. Main Page
+2. Registration Page
+3. Login Page
+4. User Home Page
+5. Admin Page
+6. Postpaid Page
+7. Prepaid Page
+8. Dongle Page
+ 
